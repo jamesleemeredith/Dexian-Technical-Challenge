@@ -5,45 +5,56 @@
 Active Project Dates: Mar 15th, 2024 - Mar 22nd, 2024
 
 ***
+
 ![alt text](./images/company_logo.png)
 
 ## Abstract
 
-
+This technical challenge aims to provide actionable insights from a dataset containing information on American colleges and universities. By applying advanced data analytics and engineering techniques, this project seeks to uncover trends and patterns that could assist a consulting firm in advising institutions of higher learning. Through meticulous data analysis, key insights regarding institutional types, acceptance rates, tuition fees, and graduation rates were discovered, enabling data-driven decision-making.
 
 ## Business Problem
 
-The Scenario for the technical challenge was the following: You are working with a firm that provides consulting services for institutions of higher learning. The team has gathered some data about a number of schools, and they are hoping you can identify some meaningful insights that could help them as they advise various colleges and universities this year.
+The scenario for this technical challenge was as follows:
+
+    You are working with a firm that provides consulting services for institutions of higher learning. The team has gathered some data about a number of schools, and they are hoping you can identify some meaningful insights that could help them as they advise various colleges and universities this year.
 
 ## Data
 
-The dataset used for this project was the Million Song Database. The Million Song Dataset was designed to promote machine learning models on industry-sized data, and started as a collaborative project between LabROSA, a research team at Columbia University, and The Echo Nest. It’s a freely-available collection of audio features and metadata for a million contemporary popular music tracks. In 2014 the Echonest was purchased by Spotify, and data from the project lives on in the current recommendation systems at Spotify, so I felt it was a fitting dataset for the project. The Million Song Dataset contains a variety of different metadata and audio feature data, but in particular I used the core dataset for the audio features, the Last.fm Dataset for genre and emotion tags, and the Echo Nest Taste Profile Subset to train the recommendation system. It should be noted that the full dataset is 280 GB uncompressed, so due to hardware constraints I used a subset of the data for this project, a much more modest 2.5 GB. 
+The dataset for this challenge provides detailed information about various American colleges and universities, including public/private designation, application statistics, tuition fees, and graduation rates. The aim was to analyze this dataset to identify trends and insights that could inform strategic advice for higher education institutions.
 
-The dataset is available for download at http://millionsongdataset.com/. The dataset is also available on AWS S3 at s3://millionsongdataset/.
-
-Attributions for the dataset is as follows:
-
-Thierry Bertin-Mahieux, Daniel P.W. Ellis, Brian Whitman, and Paul Lamere. 
-The Million Song Dataset. In Proceedings of the 12th International Society
-for Music Information Retrieval Conference (ISMIR 2011), 2011.
+The dataset used for this technical challenge can be found at the following: https://docs.google.com/spreadsheets/d/1rThcHm3ZATkhOtsGL6477nQaePrIzcsl/export
 
 ## Methods
 
-Songs were tagged with one of 4 moods: happy, sad, angry, and calm. The data was then split into a training set and a test set, with the training set containing 85% of the data, and the test set containing 15% of the data. The training set was used to train the model, and the test set was used to test the model. The data was then used to train a machine learning algorithm in order to build the detection model. The detection model was created using an iterative approach that compared the accuracy and efficiency of several different machine learning models against a baseline dummy model. Pipelines were used to efficiently process the data for each model. The models were then tuned using GridSearchCV to find the optimal hyperparameters for each model. The models were then evaluated using accuracy scores and confusion matrices. Ultimately, SVD was the model selected. After tuning the hyperparameters, an accuracy score of 0.58 was produced. Limitations in the size of the training dataset are the likely cause of the accuracy score, and future plans to improve the model accuracy are planned. The data was then used to automatically label the mood of each song in the dataset for utilization in the recommendation system.
+The project followed a structured data analysis approach:
+
+1. **Data Exploration and Visualization**: Initial data exploration to understand the dataset's structure and key variables. This involved generating visual representations to identify patterns and trends.
+
+2. **Data Cleaning**: Addressing missing values, outliers, and ensuring data integrity. This step was crucial for accurate analysis and involved strategies such as imputation and outlier handling.
+
+3. **Statistical Analysis**: Reporting on relevant statistics to provide a quantitative foundation for the insights derived from the data.
+
+4. **Insight Generation**: Combining visual and statistical analyses to uncover actionable insights regarding the distribution of institutions, the relationship between tuition fees and enrollment, and factors influencing graduation rates.
+
+5. **Recommendation**: Based on the analysis, recommendations were formulated for the consulting firm to advise their clients effectively.
+
+Technologies used included Python, Pandas for data manipulation, Matplotlib for visualization, and Jupyter Notebooks for documenting the analysis process.
 
 ## Results
 
-Results of the baseline dummy model showed an accuracy score of 0.33. The accuracy score of the SVD model was 0.58. The confusion matrix for the SVD model is shown below.
+The analysis revealed key insights into the characteristics of American colleges and universities, such as the distribution of public vs. private institutions, trends in application and acceptance rates, and the impact of tuition fees on enrollment numbers. Additionally, strategies for identifying and addressing outliers and missing data were implemented, enhancing the dataset's reliability for decision-making purposes.
 
-![img](./images/confusion_matrix.png)
+**INSERT GRAPHS AND RESULTS HERE**
 
 ## Conclusions
 
-Based on the analysis, the author recommends the use of audio feature data to predict the dominant mood of a song. Due to the ease and accuracy of detecting the dominant mood of a song based on its audio features, the author recommends that Spotify integrate a mood detection model into their current recommendation system to allow users to request music based on their current mood. Limitations of the study include the use of user-generated tags to determine the dominant mood of a song, and the use of audio features that are proprietary to the Spotify API. Future work could include the use of a larger dataset, more audio features included in the analysis, the inclusion of more mood classes, sentiment analysis of song lyrics to strengthen model accuracy, and the use of a more robust model.
+The project demonstrates the power of data analytics in uncovering meaningful insights from complex datasets. By applying a range of data engineering and analysis techniques, it was possible to provide the consulting firm with a comprehensive understanding of the higher education landscape, enabling informed strategic advice for their clients.
+
+Future directions for this work could involve deeper analysis with larger datasets, the integration of external data sources for richer insights, and the application of machine learning models to predict trends and outcomes in the education sector.
 
 ## For More Information
 
-Please review the full analysis in [the Jupyter Notebook](./full_analysis.ipynb) or [the presentation](./presentation.pdf).
+Please review the full analysis in [the Jupyter Notebook](./full_analysis.ipynb).
 
 For any additional questions, please contact James Meredith at <jam637.jlm@gmail.com>, or on [LinkedIn](https://www.linkedin.com/in/jamesleemeredith/).
 
@@ -53,9 +64,7 @@ For any additional questions, please contact James Meredith at <jam637.jlm@gmail
 ├── data
 ├── images
 ├── .gitignore
-├── app.py
 ├── full_analysis.ipynb
 ├── presentation.pdf
-├── README.md
-└── updates_msd_audio_features.ipynb
+└── README.md
 ```
