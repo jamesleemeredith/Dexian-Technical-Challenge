@@ -44,8 +44,6 @@ Technologies used included Python, Pandas for data manipulation, Matplotlib for 
 
 The analysis revealed key insights into the characteristics of American colleges and universities, such as the distribution of public vs. private institutions, trends in application and acceptance rates, and the impact of tuition fees on enrollment numbers. Additionally, strategies for identifying and addressing outliers and missing data were implemented, enhancing the dataset's reliability for decision-making purposes.
 
-**INSERT GRAPHS AND RESULTS HERE**
-
 ## Conclusions
 
 The project demonstrates the power of data analytics in uncovering meaningful insights from complex datasets. By applying a range of data engineering and analysis techniques, it was possible to provide the consulting firm with a comprehensive understanding of the higher education landscape, enabling informed strategic advice for their clients.
@@ -54,7 +52,7 @@ Future directions for this work could involve deeper analysis with larger datase
 
 ## For More Information
 
-Please review the full analysis in [the Jupyter Notebook](./full_analysis.ipynb).
+Please review the full analysis in [the Jupyter Notebook](./full_analysis.ipynb). A presentation for non-technical audiences has also been included: [presentation](./presentation.pdf)
 
 For any additional questions, please contact James Meredith at <jam637.jlm@gmail.com>, or on [LinkedIn](https://www.linkedin.com/in/jamesleemeredith/).
 
